@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+      }
+      .header {
+        margin-bottom: 2rem;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        background-color: #e2e8f0;
+        align-items: center;
+        font-size: 1.3rem;
+      }
+      .link-container {
+        padding-right: 5rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 15rem;
+        list-style-type: none;
+      }
+      .nav-button{
+        display: none;
+        border: 0px;
+        background-color: #e2e8f0;
+        cursor: pointer;
+      }
+      .hidden{
+        display: none;
+      }
+      .navbar a {
+        color: black;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      .myimg {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+      .content-1 {
+        display: flex;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        padding-top: 10rem;
+        gap: 10rem;
+        align-items: center;
+      }
+      .about-title {
+        font-weight: 700;
+        font-size: 4rem;
+      }
+      .about-paragraph {
+        font-size: 1.5rem;
+      }
+      .foto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+      .img-capt {
+        font-size: 1.5rem;
+      }
+      .container-2 {
+        width: 75%;
+        margin: 20rem auto 20rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .title-container-2 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+      }
+      .grid-parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5rem;
+      }
+      .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e2e8f0;
+        padding: 3rem;
+        border-radius: 2rem;
+        text-align: center;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+      .title-item {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .paragraph-item {
+        font-size: 1.5rem;
+      }
+      .container-3 {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 30rem auto 20rem auto;
+        align-items: flex-end;
+      }
+      .title-content-3 {
+        font-size: 5rem;
+      }
+      .contacts {
+        width: 40%;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-size: 1.5rem;
+        gap: 1rem;
+      }
+      .container-footer {
+        background-color: #e2e8f0;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+      }
+      .footer-ul {
+        display: flex;
+        gap: 15rem;
+        justify-content: center;
+        list-style-type: none;
+      }
+      .footer-li a{
+        text-decoration: none;
+      }
+      .footer-li a:hover{
+        text-decoration: underline;
+      }
+      .copyright{
+        font-size: 1.1rem;
+      }
+      @media (max-width: 768px){
+        
+      }
+      @media(max-width: 1024px){
+        
+        .content-1{
+            width: 90%;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 5rem;
+        }
+        .myimg{
+            width: 400px;
+            height: 400px;
+        }
+        .container-2{
+            margin: 15rem auto 10rem auto;
+        }
+        .container-3 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 30rem auto 20rem auto;
+        align-items: center;
+        text-align: center;
+      }
+      .title-content-3 {
+        font-size: 3rem;
+      }
+      .contacts {
+        width: 40%;
+        margin-top: 2rem;
+        margin-right: 7rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        font-size: 1.3rem;
+        gap: 1rem;
+      }
+      .footer-ul {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+      }
+      @media(max-width: 1280px){
+        .link-container {
+            position: absolute;
+            display: none;
+        }
+      .nav-button{
+            display: inline;
+        }
+        .grid-parent{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .title-container-2{
+            font-size: 2.8rem;
+        }
+      }
+    </style>
+    <title>My Website</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="navbar">
+        <a href="#">My Website</a>
+        <ul class="link-container" id="navbar-container">
+          <li>
+            <a href="#about-section">About me</a>
+          </li>
+          <li>
+            <a href="#project-section">My project</a>
+          </li>
+          <li>
+            <a href="#contact-section">Contact</a>
+          </li>
+        </ul>
+        <button class="nav-button" onclick="hideNavbar()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="content-1" id="about-section">
+        <div class="foto">
+          <img src="./img/fotoku.jpg" alt="my photo" class="myimg" />
+          <p class="img-capt">Ahmad Reza</p>
+        </div>
+        <div class="aboutme">
+          <h2 class="about-title">Im Fullstack Developer</h2>
+          <p class="about-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+            delectus est ducimus officiis tenetur consectetur molestiae
+            reprehenderit placeat numquam aut?
+          </p>
+        </div>
+      </section>
+      <section class="content-2" id="project-section">
+        <div class="container-2">
+          <div class="title-container-2">
+            <h2>My Project</h2>
+          </div>
+          <div class="grid-parent">
+            <div class="grid-item">
+              <h3 class="title-item">Build App with PHP</h3>
+              <p class="paragraph-item">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quaerat, quod veritatis odio rem odit quasi.
+              </p>
+            </div>
+            <div class="grid-item">
+              <h3 class="title-item">Build API with ExpressJS</h3>
+              <p class="paragraph-item">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
+                voluptatibus fuga quibusdam voluptate?
+              </p>
+            </div>
+            <div class="grid-item">
+              <h3 class="title-item">Build App with MERN Stack</h3>
+              <p class="paragraph-item">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Expedita, amet!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-3" id="contact-section">
+        <div class="container-3">
+          <h3 class="title-content-3">Contact Me</h3>
+          <div class="contacts">
+            <h4 class="title-phone">Phone:</h4>
+            <p class="number-phone">087840837719</p>
+            <h4 class="title-email">Email:</h4>
+            <p class="my-email">ahmadadrian324@gmail.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-footer">
+        <ul class="footer-ul">
+          <li class="footer-li"><a href="#">Github</a></li>
+          <li class="footer-li"><a href="#">Linkedin</a></li>
+          <li class="footer-li"><a href="#">Instagram</a></li>
+        </ul>      
+        <p class="copyright">My portofolio website &#169 2024</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function hideNavbar(){
+        let navbar = document.getElementById("navbar-container");
+        navbar.removeAttribute("display");
+    }
+  </script>
+</html>
